@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+/*==========Google Fonts==========*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/*==========Root==========*/
+:root {
+  --vermelha: #e93d50;
+  --branca: #fff;
+  --luz: #f60622;
+  --preto: #000;
+}
+
+/*==========Body==========*/
+body {
+  align-items: center;
+  background-image: url(../images/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Nunito', sans-serif;
+  min-height: 100vh;
+}
+
+/*==========Teclado==========*/
+.teclado {
+  background-color: #ffffff00;
+  box-shadow: 0 0 100px 20px #ffc0cb;
+  border-radius: 30px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+}
+.tecla {
+  background-color: var(--branca);
+  border-radius: 50%;
+  box-shadow: 3px 3px 0 var(--preto);
+  color: var(--preto);
+  cursor: pointer;
+  height: 120px;
+  font-size: 1.75em;
+  font-weight: bold;
+  line-height: 120px;
+  text-align: center;
+  width: 120px;
+}
+.uil-music {
+  color: var(--vermelha);
+  font-size: 1rem;
+}
+.tecla.ativa,
+.tecla:active {
+  background-color: var(--preto);
+  border: 4px solid  var(--preto);
+  box-shadow: 3px 3px 0 var(--preto) inset;
+  color: var(--branca);
+  outline: none;
+}
+.tecla.focus,
+.tecla:focus {
+  outline: none;
+  box-shadow: 1px 1px 10px var(--luz);
+}
+.tecla.active:focus,
+.tecla:active:focus {
+  box-shadow: 3px 3px 0 var(--preto) inset, 1px 1px 10px var(--luz);
+}
